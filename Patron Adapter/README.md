@@ -1,3 +1,17 @@
+# EJERCICIO: Elaborar una aplicacion que utilice el patron Adapter
+
+-Existe una clase Temperatura que opera con temperaturas en grados Celsius, con metodos para getTemperatura y setTemperatura.
+
+-La nueva clase Temperature opera con temperaturas en grados Fahrenheit, con metodos setTemperature y getTempreature.
+
+-El cliente siempre espera guardar y recibir temperaturas en grados Celsius.
+
+-El adaptador debera convertir las temperaturas de Celsius a Fahernheit y viceversa implementando los metodos getTemperatura y setTemperatura.
+
+-Probar la clase cliente con acceso a Temperatura y Temperature (esta ultima mediante un adatador), para validar que las implementaciones y conversiones son correctas.
+
+
+'''
 //This is the old interface
 interface AceInterface {
   public void setName(String n);
@@ -76,19 +90,4 @@ public class AppAdapter { //This is the modified client
     System.out.println("Customer's name: " + aceObject.getName());
   }
 }
-
-// EJERCICIO: Elaborar una aplicacion que utilice el patron Adapter
-
-// Existe una clase Temperatura que opera con temperaturas en grados Celsius, con
-// metodos para getTemperatura y setTemperatura.
-
-// La nueva clase Temperature opera con temperaturas en grados Fahrenheit, con
-// metodos setTemperature y getTempreature.
-
-// El cliente siempre espera guardar y recibir temperaturas en grados Celsius.
-
-// El adaptador debera convertir las temperaturas de Celsius a Fahernheit y viceversa
-// implementando los metodos getTemperatura y setTemperatura.
-
-// Probar la clase cliente con acceso a Temperatura y Temperature (esta ultima
-// mediante un adatador), para validar que las implementaciones y conversiones son correctas.
+'''
