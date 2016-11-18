@@ -1,3 +1,19 @@
+# EJERCICIO: Implementar una aplicacion que utilice el patron fachada.
+ -Deseamos preparar la lista de articulos que se surtiran a un cliente.
+ -El sistema tiene cuatro clases: Cliente, Pedido, Detalle, y Articulo.
+
+ -Implementar una clase Fachada que haga transparente a la aplicación
+ -cuales clases deben ser invocadas para tener todos los detalles del pedido.
+ -Para ello, crear una intancia de Cliente, una de Pedido, y una de Detalle
+ -con los articulos correspondientes.
+ -La aplicacion debera mostrar los articulos incluidos en el pedido y
+ -el costo total del pedido.
+
+ -Incluir dos versiones de implementacion de aplicacion, una con fachada y una sin ella.
+
+ -La solución debe trabajar para un codigo similar al siguiente.
+
+```
 import java.util.Arrays;
 
 class DifficultProduct {
@@ -86,23 +102,6 @@ public class AppFacade {
     System.out.println("This product is a " + product.getName());
   }
 }
-*/
-
-// EJERCICIO: Implementar una aplicacion que utilice el patron fachada.
-// Deseamos preparar la lista de articulos que se surtiran a un cliente.
-// El sistema tiene cuatro clases: Cliente, Pedido, Detalle, y Articulo.
-
-// Implementar una clase Fachada que haga transparente a la aplicación
-// cuales clases deben ser invocadas para tener todos los detalles del pedido.
-// Para ello, crear una intancia de Cliente, una de Pedido, y una de Detalle
-// con los articulos correspondientes.
-// La aplicacion debera mostrar los articulos incluidos en el pedido y
-// el costo total del pedido.
-
-//Incluir dos versiones de implementacion de aplicacion, una con fachada y una sin ella.
-
-// La solución debe trabajar para un codigo similar al siguiente.
-/*
 public class ConFachada {
    public static void main(String argc[] ) {
       Articulo articulo;
@@ -128,8 +127,4 @@ public class ConFachada {
    }
 }
 */
-
-
-
-
-  
+```
