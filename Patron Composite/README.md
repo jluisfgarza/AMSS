@@ -3,6 +3,8 @@
 //A Division is a Composite of Divisions or VPs.
 
 //http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html
+
+'''
 import java.util.*;
 
 abstract class Corporate {  //This is Component
@@ -138,7 +140,7 @@ public class AppComposite {
     AppComposite c = new AppComposite();
   }  
 }
-
+'''
 /*   Los ejercicios siguientes deben ser implementados de manera
      individual por cada estudiante (no en parejas).
 
