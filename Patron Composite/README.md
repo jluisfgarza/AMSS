@@ -1,10 +1,27 @@
+#EJERCICIO 1: Un Robot contiene dos Brazos y dos Piernas.
+ -Un Brazo contiene tres Motores de pasos de distinta capacidad, cada Motor
+esta conectado a un "Tornillo de Bolas".
+ -Una Pierna contiene dos Motores de pasos de distinta capacidad, cada motor
+está conectado directamente.
+
+#EJERCICIO 2: El menu de un restaurante está dividido en varios sub-menus.
+ -Por ejemplo, desayuno, comida y cena. A su vez cada sub-menú se divide en
+la variedad de platillos principales, bebidas y postres, disponibles en
+cada horario.
+ -En cada horario hay un chef diferente y queremos que su nombre
+aparezca en el menu.
+
+###Subir el código fuente de las dos implementaciones en un solo ZIP, junto con los diagramas UML que representen la estructura de clases de cada ejercicio.  
+
+![composite](https://raw.githubusercontent.com/jluisfgarza/AMSS/master/Patron%20Composite/composite.gif)
+
+```
 //Component is a Composite or a Leaf. A Composite contains Components or Leafs.
 //Corporate is Component; VP is a Leaf
 //A Division is a Composite of Divisions or VPs.
 
 //http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html
 
-'''
 import java.util.*;
 
 abstract class Corporate {  //This is Component
@@ -140,23 +157,4 @@ public class AppComposite {
     AppComposite c = new AppComposite();
   }  
 }
-'''
-/*   Los ejercicios siguientes deben ser implementados de manera
-     individual por cada estudiante (no en parejas).
-
-     EJERCICIO 1: Un Robot contiene dos Brazos y dos Piernas.
-     Un Brazo contiene tres Motores de pasos de distinta capacidad, cada Motor
-     esta conectado a un "Tornillo de Bolas".
-     Una Pierna contiene dos Motores de pasos de distinta capacidad, cada motor
-     está conectado directamente.
-
-   EJERCICIO 2: El menu de un restaurante está dividido en varios sub-menus.
-     Por ejemplo, desayuno, comida y cena. A su vez cada sub-menú se divide en
-     la variedad de platillos principales, bebidas y postres, disponibles en
-     cada horario. En cada horario hay un chef diferente y queremos que su nombre
-     aparezca en el menu.
-
-   Subir el código fuente de las dos implementaciones en un solo ZIP, junto con
-   los diagramas UML que representen la estructura de clases de cada ejercicio.  
-
-*/      
+```
