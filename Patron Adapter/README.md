@@ -11,7 +11,7 @@
 -Probar la clase cliente con acceso a Temperatura y Temperature (esta ultima mediante un adatador), para validar que las implementaciones y conversiones son correctas.
 
 
-'''
+```
 //This is the old interface
 interface AceInterface {
   public void setName(String n);
@@ -90,4 +90,4 @@ public class AppAdapter { //This is the modified client
     System.out.println("Customer's name: " + aceObject.getName());
   }
 }
-'''
+```
