@@ -36,17 +36,27 @@ Para ponerlo en operacion se requieren varios pasos.
     http://localhost:8080/Cajero/
 
 ## NOTAS IMPORTANTES
--Al modificar CLASSPATH asegurarse de dar toda la trayectoria desde C:\...
--Cada vez que hagas cambios a un Servlet debes reiniciar Tomcat.
+
+  -Al modificar CLASSPATH asegurarse de dar toda la trayectoria desde C:\...
+
+  -Cada vez que hagas cambios a un Servlet debes reiniciar Tomcat.
 
 ## ASPECTOS DE SEGURIDAD QUE SE INCLUYEN
--El primero es evitar "SQL injection" en Entidades mediante el uso de "SQL prepared statements".
--Incluye el uso de Session para no tener que intercambiar datos importantes entre Cliente (navegador Web) y el Servidor.
--Tambien se utilizan anotaciones para no tener que especificar en el archivo web.xml los detalles de cada Servlet que agerguemos a la aplicacion Web, aunque esto realmente no tiene que ver son seguridad, sino tomar ventaja de lo que proporciona la ultima version/especificacion de Servlets.
--Se intenta en lo posible eliminar el uso de "import x.*", para solo importar lo que realmente es requerido por cada una de las clases de la aplicacion.  
+
+  -El primero es evitar "SQL injection" en Entidades mediante el uso de "SQL prepared statements".
+
+  -Incluye el uso de Session para no tener que intercambiar datos importantes entre Cliente (navegador Web) y el Servidor.
+
+  -Tambien se utilizan anotaciones para no tener que especificar en el archivo web.xml los detalles de cada Servlet que agerguemos a la aplicacion Web, aunque esto realmente no tiene que ver son seguridad, sino tomar ventaja de lo que proporciona la ultima version/especificacion de Servlets.
+
+  -Se intenta en lo posible eliminar el uso de "import x.*", para solo importar lo que realmente es requerido por cada una de las clases de la aplicacion.  
 
 ## COMO FUNCIONA EL EJEMPLO
--Al iniciar Tomcat se invoca a la clase ContextListener, la cual establece la conexion a la base de datos (via DBConnectionManager) y guarda la conexion en ServletContext (accesible a todos los Servlets). Es importante tomar en cuenta que ContextListener asume que para la base de datos: user="root" y password="admin".
--El parametro Connection se envia a todos los metodos de las Entidades, para que se haga uso de una sola conexion a la base de datos.
--Los datos de autenticacion de cada acceso por usuarios individuales a la aplicacion Web se colocan en Session. Esos datos son destruidos por LogoutServlet al terminar la sesion.
--Claramente la arquitectura de la aplicacion viola la regla de comunicacion Interfaz-Interfaz de los diagramas de robustez, pero es la unica manera en la que se puede mantener los aspectos de seguridad y una sola conexion a la base de datos. Esto ultimo es muy importante, porque MySQL no soporta muchas conexiones a un mismo tiempo (tampoco otros DBMS).
+
+  -Al iniciar Tomcat se invoca a la clase ContextListener, la cual establece la conexion a la base de datos (via DBConnectionManager) y guarda la conexion en ServletContext (accesible a todos los Servlets). Es importante tomar en cuenta que ContextListener asume que para la base de datos: user="root" y password="admin".
+
+  -El parametro Connection se envia a todos los metodos de las Entidades, para que se haga uso de una sola conexion a la base de datos.
+
+  -Los datos de autenticacion de cada acceso por usuarios individuales a la aplicacion Web se colocan en Session. Esos datos son destruidos por LogoutServlet al terminar la sesion.
+
+  -Claramente la arquitectura de la aplicacion viola la regla de comunicacion Interfaz-Interfaz de los diagramas de robustez, pero es la unica manera en la que se puede mantener los aspectos de seguridad y una sola conexion a la base de datos. Esto ultimo es muy importante, porque MySQL no soporta muchas conexiones a un mismo tiempo (tampoco otros DBMS).
