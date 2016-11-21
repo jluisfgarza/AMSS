@@ -4,13 +4,9 @@
 
  -Implementar una clase Fachada que haga transparente a la aplicación
  -cuales clases deben ser invocadas para tener todos los detalles del pedido.
- -Para ello, crear una intancia de Cliente, una de Pedido, y una de Detalle
- -con los articulos correspondientes.
- -La aplicacion debera mostrar los articulos incluidos en el pedido y
- -el costo total del pedido.
-
+ -Para ello, crear una intancia de Cliente, una de Pedido, y una de Detalle con los articulos correspondientes.
+ -La aplicacion debera mostrar los articulos incluidos en el pedido y el costo total del pedido.
  -Incluir dos versiones de implementacion de aplicacion, una con fachada y una sin ella.
-
  -La solución debe trabajar para un codigo similar al siguiente.
 
 ```
