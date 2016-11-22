@@ -23,21 +23,21 @@ public class LoginServlet extends HttpServlet {
 
    ///Redirige cualquier GET recibido a POST
    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException { 
+        throws ServletException, IOException {
      doPost(request,response);
    }
-   
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
        throws ServletException, IOException {
 
 		String user = request.getParameter("usuario");
 		String pwd = request.getParameter("clave");
-    
+
     ///La conexion se establecio en ContextListener
     Connection conn = (Connection) getServletContext().getAttribute("DBConnection");
 
 		ControlLogin cLogin = new ControlLogin();
-		int ncuenta = cLogin.validarCliente(user, pwd, conn);
+		int ncuenta = cLogin.validarUsuario(user, pwd, conn);
 
 		if( ncuenta == 0 ) { ///El usuario o clave son incorrectos
 			PrintWriter out = response.getWriter();
@@ -54,8 +54,8 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("cuenta", sCuenta);
 			session.setAttribute("usuario", user);
 			session.setAttribute("password", pwd);
-      RequestDispatcher rd = request.getRequestDispatcher("Menu");  
-      rd.forward(request, response);        
+      RequestDispatcher rd = request.getRequestDispatcher("Menu");
+      rd.forward(request, response);
 		}
 
 	}
