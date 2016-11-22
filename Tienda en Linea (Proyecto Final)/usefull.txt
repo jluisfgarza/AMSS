@@ -1,0 +1,3 @@
+C:\..\webapps\Cajero\Entidades> javac -d ..\WEB-INF\classes *.java
+C:\..\webapps\Cajero\Controles>   javac -d ..\WEB-INF\classes *.java
+C:\..\webapps\Cajero\Interfaces> javac -d ..\WEB-INF\classes *.java

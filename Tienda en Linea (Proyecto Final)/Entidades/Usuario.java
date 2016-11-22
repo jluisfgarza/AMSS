@@ -9,62 +9,6 @@ import java.sql.SQLException;
 public class Usuario
 {
   PreparedStatement psStatement;
-  //Atributos
-  // int iUsuarioId;
-  // String sNombre = "";
-  // String sApellido = "";
-  // String sPassword = "";
-  // boolean bIsAdmin = false;
-
-  //Constructor
-  // public Usuario(int usuarioId, String nombre, String apellido, String psswrd, boolean isAdmin)
-  // {
-  //   iUsuarioId = usuarioId;
-  //   sNombre = nombre;
-  //   sApellido = apellido;
-  //   sPassword = psswrd;
-  //   bIsAdmin = isAdmin;
-  // }
-
-  // public void setUsuarioID(int usuarioId) {
-  //   iUsuarioId = usuarioId;
-  // }
-  //
-  // public void setNombre(String nombre) {
-  //   sNombre = nombre;
-  // }
-  //
-  // public void setApellido(String apellido) {
-  //   sApellido = apellido;
-  // }
-  //
-  // public void setPassword(String psswrd) {
-  //   sPassword = psswrd;
-  // }
-  //
-  // public void setIsAdmin(boolean bIs) {
-  //   bIsAdmin = bIs;
-  // }
-  //
-  // public int getUsuarioId() {
-  //   return iUsuarioId;
-  // }
-  //
-  // public String getNombre() {
-  //   return sNombre;
-  // }
-  //
-  // public String getApellido() {
-  //   return sApellido;
-  // }
-  //
-  // public String getPassword() {
-  //   return sPassword;
-  // }
-  //
-  // public boolean isAdmin() {
-  //   return bIsAdmin;
-  // }
 
   public void agregar(int usuarioId, String nombre, String apellido, String psswrd, boolean admin, Connection con) {
     try {
