@@ -1,6 +1,7 @@
 package controles;
 import java.sql.Connection;
 import entidades.Producto;
+import java.util.ArrayList;
 
 public class ControlProducto  {
    Producto producto;
@@ -9,14 +10,18 @@ public class ControlProducto  {
      producto = new Producto();
    }
 
-  //  public void agregarProducto (Connection con) {
-   //
-  //  }
-   //
-  //  public int BorrarProducto(int productoid, Connection con){
-  //    int prod = producto.borraProducto(productoid,con);
-  //    return(prod);
+   public ArrayList<String> verProd(Connection con){
+     ArrayList<String> prods = producto.verProductos(con);
+     return( prods );
+   }
 
-  //  }
+   public boolean menosunostock(String np, Connection con){
+     boolean check = producto.borraProducto(np, con);
+     return( check );
+   }
+   public boolean masunostock(String np, int cant,Connection con){
+     boolean check = producto.agregaProducto(np, cant, con);
+     return( check );
+   }
 
 }

@@ -49,11 +49,11 @@ public class MenuServlet extends HttpServlet {
             "</head> \n" +
             "<body> \n" +
             "<title>Banco AMSS</title> \n" +
-            "<h1>Cajero Electronico</h1> \n" +
+            "<h1>Tienda en Linea</h1> \n" +
             "<h2>Indica la operacion que deseas realizar</h2> </p>" +
             "<ul> \n" +
             "<li><a href=Comprar>Compra Producto</a></li></p>" +
-            "<li><a href=Agrega>Agrega Producto</a></li></p>" +
+            "<li><a href=Stock++>Agrega Stock</a></li></p>" +
             "<li><a href=Logout>Terminar la sesion</a></li></p>" +
             "</ul> \n" +
             "</body>" +

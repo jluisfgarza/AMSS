@@ -35,7 +35,6 @@ public class LoginServlet extends HttpServlet {
 
     ///La conexion se establecio en ContextListener
     Connection conn = (Connection) getServletContext().getAttribute("DBConnection");
-
 		ControlLogin cLogin = new ControlLogin();
 		int ncuenta = cLogin.validarUsuario(user, pwd, conn);
 
