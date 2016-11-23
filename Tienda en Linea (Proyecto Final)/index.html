@@ -8,17 +8,18 @@
    </head>
    <body>
 
+     <h3>BETA v.03</h3>
     <div class="login">
 		<div class="login-screen">
 			<div class="app-title">
-                <h1>Tienda Virtual </h1>
+                <h1>Tienda Virtual UNIDOS </h1>
                 <h2>Login</h2>
 			</div>
 
 			<div class="login-form">
                 <form action="Login" method="post">
 				<div class="control-group">
-                <input type="text" name="usuario" autofocus class="login-field" value="" placeholder="Usuario: " id="login-name">
+                <input type="text" name="usuario" autofocus class="login-field" value="" placeholder="ID Usuario: " id="login-name">
 				<label class="login-field-icon fui-user" for="login-name"></label>
 				</div>
 				<div class="control-group">
@@ -31,33 +32,5 @@
 		</div>
 	</div>
 
-  <!-- <?php
-  $servername = "jdbc:mysql://localhost";
-  $username = "root";
-  $password = "admin";
-  $dbname = "tiendaunidos";
-     // Create connection
-     $conn = new mysqli($servername, $username, $password, $dbname);
-     // Check connection
-     if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-     }
-
-     $sql = "SELECT ID, NombreProducto, UnidadesEnAlmacen, DescripcionProducto FROM producto";
-     $result = $conn->query($sql);
-
-     if ($result->num_rows > 0) {
-          echo "<table><tr><th>ID</th><th>Prodcuto</th><th>Stock</th><th>Descripcion</th></tr>";
-          // output data of each row
-          while($row = $result->fetch_assoc()) {
-              echo "<tr><td>" . $row["ID"]. "</td><td>" . $row["NombreProducto"]. "</td><td>" . $row["UnidadesEnAlmacen"]. "</td><td>" . $row["DescripcionProducto"]. "</td></tr>";
-          }
-          echo "</table>";
-     } else {
-          echo "0 results";
-     }
-
-     $conn->close();
-     ?> -->
    </body>
 </html>

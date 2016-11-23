@@ -11,7 +11,7 @@ font-family: 'Lato', sans-serif;
 
 body {
   font-family: Lato;
-  background-color: #3498DB;
+  background-color: #f1c40f;
   padding: 50px;
 }
 
@@ -52,13 +52,13 @@ input {
 }
 
 input:focus {
-  border: 2px solid #3498DB;
+  border: 2px solid #f39c12;
   box-shadow: none;
 }
 
 .btn {
   border: 2px solid transparent;
-  background: #3498DB;
+  background: #f1c40f;
   color: #ffffff;
   font-size: 16px;
   line-height: 25px;
@@ -74,7 +74,7 @@ input:focus {
 }
 
 .btn:hover {
-  background-color: #2980B9;
+  background-color: #f39c12;
 }
 
 .login-link {
@@ -82,4 +82,10 @@ input:focus {
   color: #444;
   display: block;
   margin-top: 12px;
+}
+
+h3 {
+  color: white;
+  position: fixed;
+  top: 0px;
 }

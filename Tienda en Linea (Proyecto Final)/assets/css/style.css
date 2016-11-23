@@ -2,7 +2,7 @@
 
 body {
   font-family: Lato;
-  background-color: #3498DB;
+  background-color: #f1c40f;
   padding: 80px;
   text-align: center;
   color: #fff;
@@ -35,7 +35,7 @@ li a.active {
 }
 
 li a:hover:not(.active) {
-    background-color: #2980b9;
+    background-color: #f39c12;
     color: white;
     border-radius: 5px;
 }
