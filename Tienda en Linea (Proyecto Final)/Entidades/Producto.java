@@ -28,7 +28,7 @@ public class Producto{
     }catch(SQLException e){ };
   }
 
-  public boolean borraProducto(String id, Connection con) {
+  public boolean borraProducto(String id, int cant, Connection con) {
     try {
       String current = "SELECT ID, UnidadesEnAlmacen FROM producto WHERE ID = " + id;
       psStatement0 = con.prepareStatement(current);
@@ -37,14 +37,15 @@ public class Producto{
       while(result.next()){
         s = result.getString("UnidadesEnAlmacen");
       }
-      String query = "UPDATE Producto SET UnidadesEnAlmacen = UnidadesEnAlmacen - 1 WHERE UnidadesEnAlmacen >= 1 and ID = " + id;
-      psStatement = con.prepareStatement(query);
-      psStatement.execute();
-        if (Integer.parseInt(s) > 0)
-          return true;
-        else
-          return false;
-      }catch(SQLException e){ };
+      if (Integer.parseInt(s) > 0 && Integer.parseInt(s) >= cant){
+        String query = "UPDATE Producto SET UnidadesEnAlmacen = UnidadesEnAlmacen - " +cant + " WHERE UnidadesEnAlmacen >= 1 and ID = " + id;
+        psStatement = con.prepareStatement(query);
+        psStatement.execute();
+        return true;
+      }
+      else
+        return false;
+    }catch(SQLException e){ };
     return false;
   }
 

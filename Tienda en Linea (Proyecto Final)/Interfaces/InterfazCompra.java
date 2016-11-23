@@ -95,7 +95,8 @@ public class InterfazCompra extends HttpServlet {
          listaprod + "</br></br>" +
              "<input type=hidden name=operacion value=comprar> \n" +
              "<input type=text name=prodid size=15 autofocus placeholder=\"ID del Producto: \"></p> \n" +
-            "<input type=submit value=Enviar name=B1></p> \n" +
+             "<input type=text name=cantcomp size=15 autofocus placeholder=\"cantidad: \"></p> \n" +
+             "<input type=submit value=Enviar name=B1></p> \n" +
          "</form> \n"
       );
 
@@ -113,10 +114,15 @@ public class InterfazCompra extends HttpServlet {
       boolean resultado;
       String errorMsg = null;
       String nompreprod = thisRequest.getParameter("prodid");
-      if (nompreprod.length() > 0) {
+      String cantcom = thisRequest.getParameter("cantcomp");
+
+      if (nompreprod.length() > 0 && cantcom.length() > 0) {
          nompreprod = nompreprod.trim();
+         cantcom = cantcom.trim();
+
           ControlProducto ce = new ControlProducto();
-          resultado = ce.menosunostock(nompreprod, con);
+          int intcant = Integer.parseInt(cantcom);
+          resultado = ce.menosunostock(nompreprod, intcant, con);
 
           if (resultado == true) { ///Compra exitosa
              encabezadoHTML();///Preparar encabezado de la pagina Web

@@ -15,8 +15,8 @@ public class ControlProducto  {
      return( prods );
    }
 
-   public boolean menosunostock(String np, Connection con){
-     boolean check = producto.borraProducto(np, con);
+   public boolean menosunostock(String np, int cant, Connection con){
+     boolean check = producto.borraProducto(np, cant, con);
      return( check );
    }
    public boolean masunostock(String np, int cant,Connection con){
